@@ -9,7 +9,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
 
   const CliqueEmMim = () => {
-    alert('Você apertou o ...!');
+    alert('Você apertou o' );
     
     console.log('Você apertou o botão');
   };
