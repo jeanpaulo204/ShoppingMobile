@@ -2,7 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import Email from './components/input';
 import Senha from './components/senha';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { Button } from '@rneui/themed';
+import { StyleSheet, Text, View } from 'react-native';
 
 
 export default function App() {
@@ -26,7 +27,7 @@ export default function App() {
           <Senha Senha="Digite sua senha"/>
 
       <View style={styles.btn}>
-        <Button onPress={CliqueEmMim} title="Entrar" />
+        <Button title="Solid" />
       </View>
       </View>
     </View>
