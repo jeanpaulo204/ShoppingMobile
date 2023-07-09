@@ -1,20 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 
-import { StyleSheet,Text, View, TextInput } from 'react-native';
+import { StyleSheet,Text, View, TextInput, Button, Alert } from 'react-native';
 
 
 export default function App() {
 
-
-
+const CliqueEmMim = () => {
+  Alert.alert('Clicou aqui')
+}
 
   return (
     <View style={styles.container}>
       <StatusBar style="auto" /> 
       <View style={styles.azul}>
         <Text>Login</Text>
-        <TextInput Title="Texto"/>
+        <TextInput style={styles.branco} placeholder="Email"/>
+        <TextInput style={styles.branco} placeholder="Senha"/>
+        <Button onPress={CliqueEmMim} title='Clique em mim'/> 
       </View>
     </View>
   );
@@ -35,7 +38,13 @@ const styles = StyleSheet.create({
 azul: {
   width: 250,
   height: 250,
-  backgroundColor: 'blue'
+  backgroundColor: 'blue',
+  justifyContent: 'center',
+  alignItems: 'center'
+},
+branco: {
+  width: 100,
+  backgroundColor: 'white'
 }
 
 });
