@@ -17,7 +17,12 @@ export default function App() {
       <StatusBar style="auto" />
       <View style={styles.batata}>
         <Text style={styles.texto}>Login</Text>
-        <TextInput style={styles.input} placeholder="Digite algo" />
+        <TextInput style={styles.input} placeholder="Bote seu Email" />
+        <TextInput
+        style={styles.input}
+        placeholder="Digite sua senha"
+        secureTextEntry={true}
+      />
       <View style={styles.btn}>
         <Button onPress={CliqueEmMim} title="Entrar" />
       </View>
