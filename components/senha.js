@@ -3,11 +3,11 @@ import { View, Text, StyleSheet, TextInput } from 'react-native';
 
 
 
-const Input = ({Email}) => {
+const Senha = ({Senha}) => {
   return (
 
     <View >
-        <TextInput style={styles.input} placeholder={Email}/>
+        <TextInput secureTextEntry={true} style={styles.input} placeholder={Senha}/>
     </View>
     
   );
@@ -25,6 +25,4 @@ const styles = StyleSheet.create({
   });
 
 
-export default Input;
-
-
+export default Senha;
