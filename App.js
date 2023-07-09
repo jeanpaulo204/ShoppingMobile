@@ -1,18 +1,35 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 export default function App() {
+
+  const CliqueEmMim = () => {
+    alert('Você apertou o botão!!');
+    
+    console.log('Você apertou o botão');
+  };
+
+
+
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.batata}>
         <Text style={styles.texto}>Login</Text>
         <TextInput style={styles.input} placeholder="Digite algo" />
+      <View style={styles.btn}>
+        <Button onPress={CliqueEmMim} title="Entrar" />
+      </View>
       </View>
     </View>
   );
 }
+
+
+
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -38,4 +55,7 @@ const styles = StyleSheet.create({
     width: '80%',
     borderRadius: 5,
   },
+  btn: {
+    marginTop: 20,
+  }
 });
