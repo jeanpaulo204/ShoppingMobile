@@ -1,4 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
+import React from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 export default function App() {
@@ -6,11 +7,10 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.batata}>
-        <Text style={styles.texto}><strong>Login</strong></Text>
-        <TextInput style={styles.input} placeholder="alguma coisa "/> 
+        <Text style={styles.texto}>Login</Text>
+        <TextInput style={styles.input} placeholder="Digite algo" />
       </View>
     </View>
-    
   );
 }
 
@@ -24,15 +24,18 @@ const styles = StyleSheet.create({
   batata: {
     height: 250,
     width: 250,
-    backgroundColor:  'red',
+    backgroundColor: 'red',
     alignItems: 'center',
     justifyContent: 'center',
   },
   texto: {
-    flex: 1,
-    fontSize: '23px',
+    fontSize: 23,
   },
   input: {
     backgroundColor: 'white',
-  }
+    padding: 10,
+    marginTop: 10,
+    width: '80%',
+    borderRadius: 5,
+  },
 });
