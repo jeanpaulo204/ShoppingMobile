@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import Quadrado from './components/input';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+
 
 export default function App() {
 
@@ -17,12 +19,11 @@ export default function App() {
       <StatusBar style="auto" />
       <View style={styles.batata}>
         <Text style={styles.texto}>Login</Text>
-        <TextInput style={styles.input} placeholder="Bote seu Email" />
-        <TextInput
-        style={styles.input}
-        placeholder="Digite sua senha"
-        secureTextEntry={true}
-      />
+        
+          <Quadrado Email="Digite seu Email"/>
+
+          <Quadrado Senha="Digite sua senha"/>
+
       <View style={styles.btn}>
         <Button onPress={CliqueEmMim} title="Entrar" />
       </View>
