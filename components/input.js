@@ -1,12 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button }
+import { View, Text } from 'react-native';
+
+
 
 const Input = () => {
-    return (
-       <View>
-            <Text>Component</Text>
-       </View>
-        );
-  };
+  return (
+
+  <View >
+<Text>
+     Meu Componente
+</Text>
+</View>
+    
+  );
+};
+
+
 
 export default Input;
