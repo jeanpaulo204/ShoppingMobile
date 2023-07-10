@@ -1,50 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './rotas/HomeScreen';
+import DetailsScreen from './rotas/DetailsScreen';
+import LoginScreen from './rotas/Login';
 
-import { StyleSheet,Text, View, TextInput, Button, Alert } from 'react-native';
+const Stack = createStackNavigator();
 
-
-export default function App() {
-
-const CliqueEmMim = () => {
-  Alert.alert('Clicou aqui')
-}
-
+function App() {
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" /> 
-      <View style={styles.azul}>
-        <Text>Login</Text>
-        <TextInput style={styles.branco} placeholder="Email"/>
-        <TextInput style={styles.branco} placeholder="Senha"/>
-        <Button onPress={CliqueEmMim} title='Clique em mim'/> 
-      </View>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-
-
-
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center', 
-  },
-azul: {
-  width: 250,
-  height: 250,
-  backgroundColor: 'blue',
-  justifyContent: 'center',
-  alignItems: 'center'
-},
-branco: {
-  width: 100,
-  backgroundColor: 'white'
-}
-
-});
+export default App;
