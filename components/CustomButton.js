@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button } from 'react-native-elements';
 
-const CustomButton = () => {
+const CustomButton = ({Text}) => {
   return (
     <Button
-      title="Clique Aqui"
+      title={Text}
       buttonStyle={{
         backgroundColor: '#FF4500',
         borderRadius: 10,

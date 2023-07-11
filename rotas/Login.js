@@ -1,17 +1,25 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Image} from 'react-native';
 import CustomInput from '../components/CustomInput';
 import PasswordInput from '../components/PasswordInput';
 import CustomButton from '../components/CustomButton';
+import { Card } from '@rneui/themed';
 
 function LoginScreen() {
   return (
+
+    <Card>
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text style={{ fontSize: 24 }}>Terceira</Text>
+    <Image
+      source={require('../img/logo-shopping.png')}
+      style={{ width: 200, height: 250 }}
+      resizeMode="contain"
+    />
       <CustomInput   Label="E-mail" Text="Digite seu e-mail"/>
       <PasswordInput Label="Senha" Text="Digite sua senha"  />
-      <CustomButton/>
+      <CustomButton Text="Acessar"/>
     </View>
+    </Card>
   );
 }
 
