@@ -9,11 +9,12 @@ function LoginScreen() {
     <View style={styles.fundo}>
       <Image
         source={require('../img/logo-shopping.png')}
-        style={{ width: 300, height: 300 , marginBottom: 30}}
+        style={{ width: 300, height: 250 , marginBottom: 10}}
         resizeMode="contain"
       />
       <CustomInput Label="E-mail" Text="Digite seu e-mail" />
       <PasswordInput Label="Senha" Text="Digite sua senha" />
+      <Text>Esqueci minha senha</Text>
       <View style={styles.ViewFlex}>
         <CustomButton Text="Acessar" />
         <Text style={styles.registerText}>Cadastrar-se</Text>
