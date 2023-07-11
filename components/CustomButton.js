@@ -16,7 +16,7 @@ const CustomButton = ({Text}) => {
         fontSize: 16,
       }}
     />
-  );
+  );[]
 };
 
 export default CustomButton;
