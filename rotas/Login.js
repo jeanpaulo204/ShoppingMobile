@@ -3,12 +3,12 @@ import { View, Text, Image} from 'react-native';
 import CustomInput from '../components/CustomInput';
 import PasswordInput from '../components/PasswordInput';
 import CustomButton from '../components/CustomButton';
-import { Card } from '@rneui/themed';
+
 
 function LoginScreen() {
   return (
 
-    <Card>
+   
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
     <Image
       source={require('../img/logo-shopping.png')}
@@ -22,7 +22,7 @@ function LoginScreen() {
      <Text>Cadastrar-se</Text>
      </View>
     </View>
-    </Card>
+   
   );
 }
 
