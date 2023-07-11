@@ -17,7 +17,10 @@ function LoginScreen() {
     />
       <CustomInput   Label="E-mail" Text="Digite seu e-mail"/>
       <PasswordInput Label="Senha" Text="Digite sua senha"  />
-      <CustomButton Text="Acessar"/>
+     <View>
+     <CustomButton Text="Acessar"/>
+     <Text>Cadastrar-se</Text>
+     </View>
     </View>
     </Card>
   );
