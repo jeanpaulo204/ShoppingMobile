@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './rotas/HomeScreen';
 import DetailsScreen from './rotas/DetailsScreen';
-import LoginScreen from './rotas/Login';
+import CadastroScreen from './rotas/Cadastro';
 
 const Stack = createStackNavigator();
 
@@ -14,7 +14,7 @@ function App() {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Details" component={DetailsScreen} />
-        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Login" component={CadastroScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
