@@ -1,11 +1,23 @@
-import React from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Image, TouchableOpacity, Alert } from 'react-native';
 import { Card, Input, Button } from 'react-native-elements';
 import CustomButton from '../components/CustomButton';
-import CustomInput from '../components/CustomInput'
-import PasswordInput from '../components/PasswordInput'
+import CustomInput from '../components/CustomInput';
+import PasswordInput from '../components/PasswordInput';
 
 function HomeScreen({ navigation }) {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+    if (email === 'Admin' && password === '123') {
+      // Usuário autenticado com sucesso, você pode redirecionar para a próxima tela
+      navigation.navigate('Login');
+    } else {
+      Alert.alert('Erro de autenticação', 'E-mail ou senha inválidos');
+    }
+  };
+
   return (
     <View style={{ flex: 1, backgroundColor: 'white', justifyContent: 'flex-start' }}>
       <Card containerStyle={{ paddingHorizontal: 20, borderWidth: 0, elevation: 0 }}>
@@ -16,14 +28,14 @@ function HomeScreen({ navigation }) {
             resizeMode="contain"
           />
         </View>
-        <CustomInput Title="E-mail" Text="Digite seu e-mail" />
-        <PasswordInput Title="E-mail" Text="Digite sua senha" />
+        <CustomInput title="E-mail" label="Digite seu e-mail" onChangeText={setEmail} />
+        <PasswordInput title="Senha" label="Digite sua senha" onChangeText={setPassword} />
         <TouchableOpacity onPress={() => console.log('Esqueci minha senha')}>
           <Text style={{ textAlign: 'right', marginVertical: 10, color: 'blue', textDecorationLine: 'underline' }}>
             Esqueci minha senha
           </Text>
         </TouchableOpacity>
-        <CustomButton Text="Acessar" BgColor="#28a745"/>
+        <CustomButton Text="Acessar" BgColor="#28a745" onPress={handleLogin} />
         <Button onPress={() => navigation.navigate('Login')} title="Cadastrar-se" type="outline" />
       </Card>
     </View>

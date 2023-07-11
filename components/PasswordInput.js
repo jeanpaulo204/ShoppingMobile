@@ -1,16 +1,19 @@
 import React from 'react';
 import { Input } from 'react-native-elements';
 
-const PasswordInput = ({Label,Text}) => {
+const PasswordInput = ({ label, text, title, onChangeText }) => {
   return (
     <Input
-      placeholder={Text}
-      label={Label}
-      leftIcon={{ 
-      type: 'font-awesome',
-      name: 'lock',
-      color: 'gray',
-      size: 18, }}
+      placeholder={label}
+      value={text}
+      label={title}
+      onChangeText={onChangeText}
+      leftIcon={{
+        type: 'font-awesome',
+        name: 'lock',
+        color: 'gray',
+        size: 18,
+      }}
       secureTextEntry={true}
       containerStyle={{
         marginBottom: 10,

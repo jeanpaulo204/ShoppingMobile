@@ -1,11 +1,13 @@
 import React from 'react';
 import { Input } from 'react-native-elements';
 
-const CustomInput = ({ Label, Text }) => {
+const CustomInput = ({ label, text, title, onChangeText }) => {
   return (
     <Input
-      placeholder={Text}
-      label={Label}
+      placeholder={label}
+      value={text}
+      label={title}
+      onChangeText={onChangeText}
       leftIcon={{
         type: 'font-awesome',
         name: 'user',
@@ -31,5 +33,4 @@ const CustomInput = ({ Label, Text }) => {
     />
   );
 };
-
 export default CustomInput;
