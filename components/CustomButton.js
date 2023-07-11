@@ -6,8 +6,8 @@ const CustomButton = ({Text}) => {
     <Button
       title={Text}
       buttonStyle={{
-        backgroundColor: '#FF4500',
-        borderRadius: 10,
+        backgroundColor:"#28a745",
+        marginVertical: 15,
         paddingHorizontal: 20,
         paddingVertical: 10,
       }}

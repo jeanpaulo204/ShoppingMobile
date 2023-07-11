@@ -1,44 +1,31 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
-import CustomInput from '../components/CustomInput';
-import PasswordInput from '../components/PasswordInput';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { Card, Input, Button } from 'react-native-elements';
 import CustomButton from '../components/CustomButton';
 
 function LoginScreen() {
   return (
-    <View style={styles.fundo}>
-      <Image
-        source={require('../img/logo-shopping.png')}
-        style={{ width: 300, height: 250 , marginBottom: 10}}
-        resizeMode="contain"
-      />
-      <CustomInput Label="E-mail" Text="Digite seu e-mail" />
-      <PasswordInput Label="Senha" Text="Digite sua senha" />
-      <Text>Esqueci minha senha</Text>
-      <View style={styles.ViewFlex}>
-        <CustomButton Text="Acessar" />
-        <Text style={styles.registerText}>Cadastrar-se</Text>
-      </View>
+    <View style={{ flex: 1, backgroundColor: 'white', justifyContent: 'flex-start' }}>
+      <Card containerStyle={{ paddingHorizontal: 20, borderWidth: 0, elevation: 0 }}>
+        <View style={{ alignItems: 'center', marginTop: -40 }}>
+          <Image
+            source={require('../img/logo-shopping.png')}
+            style={{ width: 200, height: 200, marginBottom: 20 }}
+            resizeMode="contain"
+          />
+        </View>
+        <Input label="E-mail" placeholder="Digite seu e-mail" />
+        <Input label="Senha" placeholder="Digite sua senha" secureTextEntry />
+        <TouchableOpacity onPress={() => console.log('Esqueci minha senha')}>
+          <Text style={{ textAlign: 'right', marginVertical: 10, color: 'blue', textDecorationLine: 'underline' }}>
+            Esqueci minha senha
+          </Text>
+        </TouchableOpacity>
+        <CustomButton Text="Acessar" BgColor="#28a745"/>
+        <Button title="Cadastrar-se" type="outline" />
+      </Card>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  ViewFlex: {
-    flexDirection: 'row',
-    marginTop: 10,
-  },
-  registerText: {
-    marginLeft: 50,
-    marginTop: 13,
-    color: 'blue',
-  },
-  fundo: {
-    backgroundColor: 'white',
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 export default LoginScreen;

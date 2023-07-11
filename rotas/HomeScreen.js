@@ -10,7 +10,7 @@ function HomeScreen({ navigation }) {
         onPress={() => navigation.navigate('Details')}
       />
     <Button
-        title="Proxima"
+        title="LOGIN"
         onPress={() => navigation.navigate('Login')}
       />
     </View>
