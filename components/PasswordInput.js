@@ -6,14 +6,20 @@ const PasswordInput = ({Label,Text}) => {
     <Input
       placeholder={Text}
       label={Label}
-      leftIcon={{ type: 'font-awesome', name: 'lock' }}
+      leftIcon={{ 
+      type: 'font-awesome',
+      name: 'lock',
+      color: 'gray',
+      size: 18, }}
       secureTextEntry={true}
       containerStyle={{
         marginBottom: 10,
       }}
       inputContainerStyle={{
+        borderTopWidth: 0,
+        borderLeftWidth: 0,
+        borderRightWidth: 0,
         borderWidth: 1,
-        borderRadius: 5,
         paddingLeft: 10,
         borderColor: 'gray',
       }}
