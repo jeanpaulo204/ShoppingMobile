@@ -36,7 +36,7 @@ function HomeScreen({ navigation }) {
           </Text>
         </TouchableOpacity>
         <CustomButton Text="Acessar" BgColor="#28a745" onPress={handleLogin} />
-        <Button onPress={() => navigation.navigate('Login')} title="Cadastrar-se" type="outline" />
+        <Button onPress={() => navigation.navigate('Cadastro')} title="Cadastrar-se" type="outline" />
       </Card>
     </View>
   );
