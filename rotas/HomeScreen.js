@@ -30,7 +30,7 @@ function HomeScreen({ navigation }) {
         </View>
         <CustomInput title="E-mail" label="Digite seu e-mail" onChangeText={setEmail} />
         <PasswordInput title="Senha" label="Digite sua senha" onChangeText={setPassword} />
-        <TouchableOpacity onPress={() => console.log('Esqueci minha senha')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Recuperar Senha')}>
           <Text style={{ textAlign: 'right', marginVertical: 10, color: 'blue', textDecorationLine: 'underline' }}>
             Esqueci minha senha
           </Text>
