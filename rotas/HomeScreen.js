@@ -10,9 +10,9 @@ function HomeScreen({ navigation }) {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    if (email === 'Admin' && password === '123') {
+    if (email === '1' && password === '1') {
       // Usuário autenticado com sucesso, você pode redirecionar para a próxima tela
-      navigation.navigate('Login');
+      navigation.navigate('Painel De Pedido');
     } else {
       Alert.alert('Erro de autenticação', 'E-mail ou senha inválidos');
     }

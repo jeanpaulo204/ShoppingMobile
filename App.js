@@ -6,6 +6,7 @@ import HomeScreen from './rotas/HomeScreen';
 import DetailsScreen from './rotas/DetailsScreen';
 import CadastroScreen from './rotas/Cadastro';
 import RecuperarSenha from './rotas/RecuperarSenha';
+import PainelDePedido from './rotas/PainelDePedido';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,7 @@ function App() {
         <Stack.Screen name="Details" component={DetailsScreen} />
         <Stack.Screen name="Cadastro" component={CadastroScreen} />
         <Stack.Screen name="Recuperar Senha" component={RecuperarSenha} />
+        <Stack.Screen name="Painel De Pedido" component={PainelDePedido} />
       </Stack.Navigator>
     </NavigationContainer>
   );
