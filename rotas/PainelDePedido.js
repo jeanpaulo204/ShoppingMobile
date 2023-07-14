@@ -5,6 +5,7 @@ import SearchBar from '../components/SearchBar';
 import PedidoList from '../components/PedidoList';
 import PedidoModal from '../components/PedidoModal';
 import NovoPedidoModal from '../components/NovoPedidoModal';
+import HeaderCliente from '../components/HeaderCliente';
 
 function PainelDePedido() {
   const [tableData, setTableData] = useState([
@@ -60,6 +61,7 @@ function PainelDePedido() {
 
   return (
 <View style={styles.container}>
+<HeaderCliente/>
 <Card>
       <SearchBar
         searchText={searchText}
