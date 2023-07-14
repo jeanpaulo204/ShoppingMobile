@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Button } from 'react-native';
-import { Card} from 'react-native-elements';
+import { Card, } from 'react-native-elements';
 import SearchBar from '../components/SearchBar';
 import PedidoList from '../components/PedidoList';
 import PedidoModal from '../components/PedidoModal';

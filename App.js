@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './rotas/HomeScreen';
@@ -12,15 +11,23 @@ const Stack = createStackNavigator();
 
 function App() {
   return (
-    <NavigationContainer >
-      <Stack.Navigator>
+    <NavigationContainer  >
+      <Stack.Navigator
+      screenOptions={{
+        headerMode: 'screen',
+        headerTintColor: 'white',
+        headerStyle: { backgroundColor: '#A659BF' },
+      }}
+      
+      >
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Details" component={DetailsScreen} />
         <Stack.Screen name="Cadastro" component={CadastroScreen} />
-        <Stack.Screen name="Recuperar Senha" component={RecuperarSenha} />
+        <Stack.Screen cardOverlayEnabled name="Recuperar Senha" component={RecuperarSenha} />
         <Stack.Screen name="Painel De Pedido" component={PainelDePedido} />
       </Stack.Navigator>
     </NavigationContainer>
+   
   );
 }
 
