@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Button } from 'react-native';
+import { Card} from 'react-native-elements';
 import SearchBar from '../components/SearchBar';
 import PedidoList from '../components/PedidoList';
 import PedidoModal from '../components/PedidoModal';
@@ -58,7 +59,8 @@ function PainelDePedido() {
   };
 
   return (
-    <View style={styles.container}>
+<View style={styles.container}>
+<Card>
       <SearchBar
         searchText={searchText}
         onSearchTextChange={setSearchText}
@@ -82,10 +84,12 @@ function PainelDePedido() {
 
       <NovoPedidoModal
         visible={isNovoPedidoModalVisible}
-        onToggle={setNovoPedidoModalVisible}
+        onToggle={handleNovoPedidoCancel}
         onSubmit={handleNovoPedidoSubmit}
       />
+  </Card>
     </View>
+
   );
 }
 
@@ -95,7 +99,14 @@ const styles = StyleSheet.create({
     padding: 16,
     backgroundColor: '#fff',
   },
-  // Resto dos seus estilos aqui
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginBottom: 16,
+  },
+  buttonSpacer: {
+    width: 8,
+  },
 });
 
 export default PainelDePedido;
