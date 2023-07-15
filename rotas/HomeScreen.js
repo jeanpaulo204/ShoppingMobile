@@ -35,7 +35,7 @@ function HomeScreen({ navigation }) {
             Esqueci minha senha
           </Text>
         </TouchableOpacity>
-        <CustomButton Text="Acessar" BgColor="#28a745" onPress={handleLogin} />
+        <CustomButton Text="Acessar" BgColor="#28a745" onPress={handleLogin}/>
         <Button onPress={() => navigation.navigate('Cadastro')} title="Cadastrar-se" type="outline" />
       </Card>
     </View>
