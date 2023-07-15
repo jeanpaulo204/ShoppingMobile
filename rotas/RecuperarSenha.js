@@ -15,6 +15,12 @@ function RecuperarSenha() {
       setdialogvisivel(false);
     }
 
+    const [email, setEmail] = useState('');
+
+      const SalvarEmail = (text) => {
+        setEmail(text);
+      };
+
 
   return (
     <View style={{ flex: 1, backgroundColor: 'white', justifyContent: 'flex-start' }}>
@@ -28,10 +34,10 @@ function RecuperarSenha() {
       </View>
       <Text style={styles.Title}>RECUPERAÇÃO SENHA</Text>
       <Text style={styles.SubTitle}>Enviaremos um link para o seu e-mail com instruções para sua recuperação de senha!</Text>
-      <Input placeholder="E-mail ou usuário" />
-      <CustomButton onPress={abrirDialog} Text="Enviar" BgColor="#28a745" />
+      <Input value={email}  onChangeText={SalvarEmail} placeholder="E-mail ou usuário" />
+      <CustomButton  onPress={abrirDialog} Text="Enviar" BgColor="#28a745" />
     </Card>
-    <DialogRecupera abrir={dialogvisivel} fechar={fecharDialog}/>
+    <DialogRecupera email={email}  abrir={dialogvisivel} fechar={fecharDialog}/>
   </View>
   );
 

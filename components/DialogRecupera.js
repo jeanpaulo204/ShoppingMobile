@@ -3,7 +3,7 @@ import { View, Image, StyleSheet } from 'react-native';
 import {Overlay, Card, Input, Text} from 'react-native-elements';
 import CustomButton from '../components/CustomButton';
 
-function DialogRecupera({abrir, fechar}) {
+function DialogRecupera({abrir, fechar, email}) {
 
   return (
     <Overlay isVisible={abrir} onBackdropPress={fechar}>
@@ -18,7 +18,7 @@ function DialogRecupera({abrir, fechar}) {
         </View>
         <View style={styles.Centro}>
             <Text style={styles.Title}>LINK ENVIADO</Text>
-            <Text style={styles.SubTitle}>Enviamos um link para o e-mail informado para recuperação de senha. Por favor verifique sua caixa de entrada e siga as instruções para recuperação de acesso!</Text>
+            <Text style={styles.SubTitle}>Enviamos um link para o e-mail {email.toString()} para recuperação de senha. Por favor verifique sua caixa de entrada e siga as instruções para recuperação de acesso!</Text>
         </View>
     </Card>
         </View>
