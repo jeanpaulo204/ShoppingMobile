@@ -11,7 +11,7 @@ function RecuperarSenha() {
       <View style={{ alignItems: 'center', marginTop: -40 }}>
         <Image
           source={require('../img/logo-shopping.png')}
-          style={{ width: 150, height: 140, marginBottom: 10 }}
+          style={{ width: 150, height: 140, marginBottom: 10, marginTop: 30}}
           resizeMode="contain"
         />
       </View>
