@@ -7,7 +7,7 @@ function RecuperarSenha() {
 
   return (
     <View style={{ flex: 1, backgroundColor: 'white', justifyContent: 'flex-start' }}>
-    <Card containerStyle={{ paddingHorizontal: 20, elevation: 0, marginTop: 200 }}>
+    <Card containerStyle={{ paddingHorizontal: 20, elevation: 0, marginTop: 100 }}>
       <View style={{ alignItems: 'center', marginTop: -40 }}>
         <Image
           source={require('../img/logo-shopping.png')}
@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
 
   Title: {
     fontSize: 24,
-    fontFamily: 'Helvetica Neue',
     marginBottom: 30,
     color: 'purple',
   }
