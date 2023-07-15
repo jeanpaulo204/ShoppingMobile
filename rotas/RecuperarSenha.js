@@ -7,7 +7,7 @@ function RecuperarSenha() {
 
   return (
     <View style={{ flex: 1, backgroundColor: 'white', justifyContent: 'flex-start' }}>
-    <Card containerStyle={{ paddingHorizontal: 20, borderWidth: 0, elevation: 0 }}>
+    <Card containerStyle={{ paddingHorizontal: 20, elevation: 0, marginTop: 200 }}>
       <View style={{ alignItems: 'center', marginTop: -40 }}>
         <Image
           source={require('../img/logo-shopping.png')}
@@ -15,8 +15,7 @@ function RecuperarSenha() {
           resizeMode="contain"
         />
       </View>
-      <Text h4>Recuperação Senha</Text>
-      <br/>
+      <Text style={styles.Title}>RECUPERAÇÃO SENHA</Text>
       <Text style={styles.SubTitle}>Enviaremos um link para o seu e-mail com instruções para sua recuperação de senha!</Text>
       <Input placeholder="E-mail ou usuário" />
       <CustomButton Text="Enviar" BgColor="#28a745" />
@@ -35,9 +34,17 @@ const styles = StyleSheet.create({
   },
 
   SubTitle: {
-    fontSize: 18,
+    fontSize: 20,
     marginBottom: 30,
+    color: 'gray',
 
+  },
+
+  Title: {
+    fontSize: 24,
+    fontFamily: 'Helvetica Neue',
+    marginBottom: 30,
+    color: 'purple',
   }
 });
 
