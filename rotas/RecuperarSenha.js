@@ -5,6 +5,16 @@ import CustomButton from '../components/CustomButton';
 import DialogRecupera from '../components/DialogRecupera';
 
 function RecuperarSenha() {
+    const [dialogvisivel, setdialogvisivel] = useState(false);
+
+    const abrirDialog = () => {
+      setdialogvisivel(true);
+    }
+
+    const fecharDialog = () => {
+      setdialogvisivel(false);
+    }
+
 
   return (
     <View style={{ flex: 1, backgroundColor: 'white', justifyContent: 'flex-start' }}>
@@ -19,10 +29,9 @@ function RecuperarSenha() {
       <Text style={styles.Title}>RECUPERAÇÃO SENHA</Text>
       <Text style={styles.SubTitle}>Enviaremos um link para o seu e-mail com instruções para sua recuperação de senha!</Text>
       <Input placeholder="E-mail ou usuário" />
-      <DialogRecupera/>
-      <CustomButton  Text="Enviar" BgColor="#28a745" />
+      <CustomButton onPress={abrirDialog} Text="Enviar" BgColor="#28a745" />
     </Card>
-    
+    <DialogRecupera abrir={dialogvisivel} fechar={fecharDialog}/>
   </View>
   );
 

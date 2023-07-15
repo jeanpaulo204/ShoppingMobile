@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import {Overlay} from 'react-native-elements';
+import {Overlay, Text} from 'react-native-elements';
 import CustomButton from '../components/CustomButton';
 
 function DialogRecupera({abrir, fechar}) {
