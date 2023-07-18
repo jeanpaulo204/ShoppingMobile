@@ -46,10 +46,10 @@ function CadastroScreen() {
         <Input placeholder="Senha" secureTextEntry={true} />
         <Input placeholder="Confirmar Senha" secureTextEntry={true} />
    
-       
-        
         <Button title="Cadastrar" />
+        
       </Card>
+     
     </View>
   );
 }
