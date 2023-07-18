@@ -5,6 +5,7 @@ import HomeScreen from './rotas/HomeScreen';
 import CadastroScreen from './rotas/Cadastro';
 import RecuperarSenha from './rotas/RecuperarSenha';
 import PainelDePedido from './rotas/PainelDePedido';
+import Footer from './components/Footer';
 
 const Stack = createStackNavigator();
 
@@ -43,7 +44,9 @@ function App() {
         />
         <Stack.Screen name="Painel De Pedido" component={PainelDePedido} />
       </Stack.Navigator>
+      <Footer/>
     </NavigationContainer>
+  
   );
 }
 
