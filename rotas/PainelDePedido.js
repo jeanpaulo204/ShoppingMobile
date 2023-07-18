@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Button } from 'react-native';
-import { Card, } from 'react-native-elements';
+import { View, StyleSheet} from 'react-native';
+import { Card, Button } from 'react-native-elements';
 import SearchBar from '../components/SearchBar';
 import PedidoList from '../components/PedidoList';
 import PedidoModal from '../components/PedidoModal';
 import NovoPedidoModal from '../components/NovoPedidoModal';
 import HeaderCliente from '../components/HeaderCliente';
+import DialogCadastroEstoque from '../components/DialogCadastroEstoque';
 
-function PainelDePedido() {
+function PainelDePedido({ navigation }) {
   const [tableData, setTableData] = useState([
     { data: '12/07', hora: '15:30', id: '456', qtd: '2', status: 'Entregue', entregador: 'João' },
     { data: '13/07', hora: '10:45', id: '012', qtd: '1', status: 'Preparado', entregador: 'Maria' },
@@ -19,6 +20,7 @@ function PainelDePedido() {
   const [selectedPedido, setSelectedPedido] = useState(null);
   const [searchText, setSearchText] = useState('');
   const [isNovoPedidoModalVisible, setNovoPedidoModalVisible] = useState(false);
+  const [isCadastroEstoqueDialogVisible, setCadastroEstoqueDialogVisible] = useState(false);
 
   const handleStatusPress = (pedido) => {
     setSelectedPedido(pedido);
@@ -59,39 +61,51 @@ function PainelDePedido() {
     setSelectedPedido(null);
   };
 
+  const handleAbrirCadastroEstoque = () => {
+    setCadastroEstoqueDialogVisible(true);
+  };
+
+  const handleFecharCadastroEstoque = () => {
+    setCadastroEstoqueDialogVisible(false);
+  };
+
   return (
-<View style={styles.container}>
-<HeaderCliente/>
-<Card>
-      <SearchBar
-        searchText={searchText}
-        onSearchTextChange={setSearchText}
-        onClearSearch={handleClearSearch}
-      />
+    <View style={styles.container}>
+      <HeaderCliente/>
+      <Card>
+        <SearchBar
+          searchText={searchText}
+          onSearchTextChange={setSearchText}
+          onClearSearch={handleClearSearch}
+        />
 
-      <View style={styles.buttonContainer}>
-        <View style={styles.buttonSpacer} />
-        <Button title="Novo Pedido" onPress={handleNovoPedido} />
-        <View style={styles.buttonSpacer} />
-        {/* Seu outro botão aqui */}
-      </View>
+        <View style={styles.buttonContainer}>
+          <View style={styles.buttonSpacer} />
+          <Button title="Novo Pedido" onPress={handleNovoPedido} />
+          <View style={styles.buttonSpacer} />
+          <Button title="Novo Estoque" onPress={handleAbrirCadastroEstoque} />
+        </View>
 
-      <PedidoList
-        data={tableData}
-        onItemPress={handleStatusPress}
-        onItemDelete={handleDeletePedido}
-      />
+        <PedidoList
+          data={tableData}
+          onItemPress={handleStatusPress}
+          onItemDelete={handleDeletePedido}
+        />
 
-      <PedidoModal pedido={selectedPedido} onClose={() => setSelectedPedido(null)} onDelete={handleDeletePedido} />
+        <PedidoModal pedido={selectedPedido} onClose={() => setSelectedPedido(null)} onDelete={handleDeletePedido} />
 
-      <NovoPedidoModal
-        visible={isNovoPedidoModalVisible}
-        onToggle={handleNovoPedidoCancel}
-        onSubmit={handleNovoPedidoSubmit}
-      />
-  </Card>
+        <NovoPedidoModal
+          visible={isNovoPedidoModalVisible}
+          onToggle={handleNovoPedidoCancel}
+          onSubmit={handleNovoPedidoSubmit}
+        />
+
+        <DialogCadastroEstoque
+          visible={isCadastroEstoqueDialogVisible}
+          onClose={handleFecharCadastroEstoque}
+        />
+      </Card>
     </View>
-
   );
 }
 

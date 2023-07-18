@@ -10,7 +10,7 @@ function HomeScreen({ navigation }) {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    if (email === '1' && password === '1') {
+    if (email === 'Admin' && password === '123') {
       // Usuário autenticado com sucesso, você pode redirecionar para a próxima tela
       navigation.navigate('Painel De Pedido');
     } else {

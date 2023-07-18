@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { View, Image, StyleSheet } from 'react-native';
-import {Overlay, Card, Input, Text} from 'react-native-elements';
+import { View, Image, StyleSheet , Text} from 'react-native';
+import {Overlay, Card, Input, } from 'react-native-elements';
 import CustomButton from '../components/CustomButton';
 
 function DialogRecupera({abrir, fechar, email}) {
@@ -18,7 +18,7 @@ function DialogRecupera({abrir, fechar, email}) {
         </View>
         <View style={styles.Centro}>
             <Text style={styles.Title}>LINK ENVIADO</Text>
-            <Text style={styles.SubTitle}>Enviamos um link para o e-mail {email.toString()} para recuperação de senha. Por favor verifique sua caixa de entrada e siga as instruções para recuperação de acesso!</Text>
+            <Text style={styles.SubTitle}>Enviamos um link para o e-mail <Text style={styles.Strong}>{email.toString()}</Text> para recuperação de senha. Por favor verifique sua caixa de entrada e siga as instruções para recuperação de acesso!</Text>
         </View>
     </Card>
         </View>
@@ -46,6 +46,10 @@ const styles = StyleSheet.create({
       Title: {
         fontSize: 24,
         marginBottom: 30,
+        color: 'purple',
+      },
+
+      Strong: {
         color: 'purple',
       },
 
