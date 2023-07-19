@@ -24,7 +24,7 @@ Se por acaso você esquecer sua senha de acesso ao ShoppingMobile, não se preoc
 
 
 <h3><strong>Painel de Pedidos - Detalhando suas compras</strong></h3>
-<img src="./img/PainelDePedido1.png"/>
+<img src="./img/painelDePedido1.png"/>
 <br/>
 <p>
 Visualização do Pedido: O Painel de Pedidos exibirá uma lista com os IDs dos pedidos feitos pelo usuário. Cada ID corresponderá a uma compra específica realizada no aplicativo. Ao lado de cada ID, será mostrada a quantidade total de itens contidos em cada pedido, permitindo que o usuário tenha uma noção rápida da quantidade de produtos em cada compra.
