@@ -6,8 +6,8 @@
 <p>Ao abrir o aplicativo, a primeira tela que você encontrará é a de login. Nessa etapa, você precisará inserir suas credenciais de acesso, que normalmente consistem em um nome de usuário ou e-mail e uma senha. O campo "Acessar" é onde você pode efetuar o login utilizando suas informações de conta já cadastradas anteriormente.</p>
 
 <br/>
-<img src="./img/Cadastro.png"/>
 <h3><strong>Botão "Cadastre-se"</strong></h3>
+<img src="./img/Cadastro.png"/>
 <br/>
 <p>
 Caso você ainda não tenha uma conta no ShoppingMobile, pode utilizar a opção "Cadastre-se" presente na tela de login. Ao clicar nesse botão, você será direcionado para o formulário de registro, onde deverá fornecer algumas informações pessoais para criar sua conta no aplicativo. Essas informações geralmente incluem nome, e-mail, senha e talvez outros detalhes relevantes para o cadastro.
