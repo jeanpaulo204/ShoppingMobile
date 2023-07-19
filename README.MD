@@ -46,7 +46,7 @@ Para facilitar ainda mais a busca de informações específicas sobre um determi
 
 
 <h3><strong>Visualização Detalhada do Pedido</strong></h3>
-<img src="./img/PainelDePedido2.png"/>
+<img src="./img/dialog.jpeg"/>
 <br/>
 
 
